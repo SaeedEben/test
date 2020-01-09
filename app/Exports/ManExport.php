@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithMapping;
 
-class ManExport implements FromCollection , WithMapping
+class ManExport implements FromCollection
 {
     /**
     * @return Collection
@@ -15,15 +15,5 @@ class ManExport implements FromCollection , WithMapping
     public function collection()
     {
         return Man::all();
-    }
-
-    /**
-     * @inheritDoc
-     */
-    public function map($man) :array
-    {
-        return  [
-            $man->name
-        ];
     }
 }

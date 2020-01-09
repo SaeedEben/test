@@ -45,7 +45,8 @@ class ManController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
+     *
      * @return Response
      */
     public function store(Request $request)
@@ -58,7 +59,7 @@ class ManController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Man  $man
+     * @param Man $man
      *
      * @return int
      */
@@ -70,7 +71,8 @@ class ManController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Man  $man
+     * @param Man $man
+     *
      * @return Response
      */
     public function edit(Man $man)
@@ -81,8 +83,9 @@ class ManController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Man  $man
+     * @param Request $request
+     * @param  Man    $man
+     *
      * @return Response
      */
     public function update(Request $request, Man $man)
@@ -93,8 +96,9 @@ class ManController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Man  $man
-     * @return Response
+     * @param Man $man
+     *
+     * @return void
      */
     public function destroy(Man $man)
     {
