@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8f60c64-8005-42b7-acd9-4df14bee266c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ManController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ManController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
       <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
@@ -111,6 +115,28 @@
       <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
       <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
       <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/nicmart/tree" />
+      <path value="$PROJECT_DIR$/vendor/tightenco/collect" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image" />
+      <path value="$PROJECT_DIR$/vendor/spatie/robots-txt" />
+      <path value="$PROJECT_DIR$/vendor/spatie/image-optimizer" />
+      <path value="$PROJECT_DIR$/vendor/spatie/browsershot" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/spatie/crawler" />
+      <path value="$PROJECT_DIR$/vendor/league/glide" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/sunra/php-simple-html-dom-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/fabpot/goutte" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Vme8er9NspKlGIUsQCXblU9dVm" />
@@ -167,7 +193,9 @@
       <workItem from="1578467482193" duration="94000" />
       <workItem from="1578469358173" duration="17120000" />
       <workItem from="1578555318572" duration="836000" />
-      <workItem from="1578558635850" duration="11858000" />
+      <workItem from="1578558635850" duration="13681000" />
+      <workItem from="1578729583453" duration="13246000" />
+      <workItem from="1582443212281" duration="11173000" />
     </task>
     <servers />
   </component>
@@ -175,6 +203,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="542" y="17" width="816" height="1060" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1582454818407">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="542" y="17" width="816" height="1060" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1582454818407" />
     <state x="726" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578485890228">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -191,10 +223,11 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="475" y="188" width="1037" height="737" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1577862704111" />
-    <state width="648" height="445" key="SwitcherDM" timestamp="1578560460281">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state width="672" height="445" key="SwitcherDM" timestamp="1582461914063">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="648" height="445" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1578560460281" />
+    <state width="672" height="445" key="SwitcherDM/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1582461914063" />
+    <state width="648" height="445" key="SwitcherDM/67.27.1853.1053@67.27.1853.1053" timestamp="1578742124971" />
     <state x="876" y="499" width="234" height="121" key="com.intellij.ide.ui.customization.CustomizableActionsPanel$EditIconDialog" timestamp="1577862644712">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

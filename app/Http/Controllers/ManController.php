@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Crawl;
 use App\Exports\ManExport;
 use App\Http\TestController;
 use App\Man;
+use App\Observers\FirstCrawl;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Maatwebsite\Excel\Facades\Excel;
+use Spatie\Crawler\Crawler;
+use Sunra\PhpSimple\HtmlDomParser;
 
 class ManController extends Controller
 {
@@ -23,19 +28,85 @@ class ManController extends Controller
 //        dump(TestController::process());
 //        return 1;
 //
-        $man = Man::select('status')
-                    ->selectRaw('count(*) as Count')
-                    ->groupBy('status')
-                    ->get();
-        $scop = Man::active();
-        $filt = Man::filter();
-        return $filt;
+//        $man   = Man::select('status')
+//            ->selectRaw('count(*) as Count')
+//            ->groupBy('status')
+//            ->get();
+//        $scop  = Man::active();
+//        $value = 1;
+//        $filt  = Man::filter($value);
+//        return $filt;
+
+
+//        $url = '';
+//        $class = new FirstCrawl();
+//
+//        Crawler::create()
+//            ->addCrawlObserver($class)
+//            ->startCrawling('www.varzesh3.com');
+
+//        $image = [];
+//        $url   = 'https://www.varzesh3.com/';
+//
+//        $dom = HtmlDomParser::str_get_html($url);
+//
+//        $findImg = $dom->find('img');
+//
+//        foreach ($findImg as $img) {
+//            $image[] = $img->getAttribute('src');
+//        }
+//
+//        $client = new Client();
+//
+//        $response = $client->request('GET', 'http://www.varzesh3.com');
+//
+//        echo $response->getStatusCode();
+//        echo $response->getHeaderLine('content-type');
+//        echo $response->getBody();
+//
+//        return [
+//            'html' => json_decode($dom, true),
+//            'img'  => $image,
+//        ];
+
+        $client = new \Goutte\Client();
+
+
+        $crawler = $client->request('GET', 'http://www.varzesh3.com');
+
+        $url = [];
+
+        $crawler->filter('a')->each(function ($node) use (&$url) {
+            $url[] = $node->attr('href');
+        });
+
+        $client = new Client();
+
+
+        $end = new \Goutte\Client();
+
+        $end = $end->request('GET', $url[0]);
+
+        $end->filter('a')->each(function ($node) use (&$url) {
+            $url[] = $node->attr('href');
+        });
+
+        $response = $client->request('GET', $url[0]);
+
+
+//        echo $response->getStatusCode();
+//        echo $response->getHeaderLine('content-type');
+        echo $response->getBody();
+
+
+//        return $url;
+
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return int
+     * @return void
      */
     public function create()
     {
@@ -51,7 +122,7 @@ class ManController extends Controller
      */
     public function store(Request $request)
     {
-        $request->session()->push('user' , 'hi');
+        $request->session()->push('user', 'hi');
         $sess = $request->session()->get('user');
         return $sess;
     }
@@ -84,7 +155,7 @@ class ManController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  Man    $man
+     * @param Man     $man
      *
      * @return Response
      */
